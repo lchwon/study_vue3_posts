@@ -1,6 +1,10 @@
 <template>
 	<div>
 		<h2>제목</h2>
+		<p>params: {{ $route.params }}</p>
+		<p>query: {{ $route.query }}</p>
+		<p>query value: {{ $route.query.searchText }}</p>
+		<p>hash: {{ $route.hash }}</p>
 		<p>내용</p>
 		<p class="text-muted">2020-01-01</p>
 		<hr class="my-4" />

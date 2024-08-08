@@ -39,9 +39,9 @@ const routes = [
 		component: PostCreateView,
 	},
 
-	// ':id' <- 동적 라우팅이라도하며 여러 개의 URL을 하나의 페이지 컴포넌트에 맵핑하고 싶을때
+	// ':' <- 동적 라우팅이라도하며 여러 개의 URL을 하나의 페이지 컴포넌트에 맵핑하고 싶을때
 	// 표현하는 표현 방식이다.
-	// 이 세미콜론은 파라미터라고 해서 라우트 객체에 params로 받을 수 있다. -> {{ $route.params }}
+	// 이 세미콜론은 파라미터라고해서 라우트 객체에 params로 받을 수 있다. -> {{ $route.params }}
 	{
 		path: '/posts/:id',
 		name: 'PostDetail',
