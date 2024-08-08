@@ -3,6 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import AboutView from '@/views/AboutView.vue';
 
+//게시판
+import PostCreateView from '@/views/posts/PostCreateView.vue';
+import PostDetailView from '@/views/posts/PostDetailView.vue';
+import PostEditView from '@/views/posts/PostEditView.vue';
+import PostListView from '@/views/posts/PostListView.vue';
+
 //router설정
 const routes = [
 	{
@@ -14,6 +20,32 @@ const routes = [
 		path: '/about', //about로 들어왔을 때
 		name: 'About',
 		component: AboutView,
+	},
+
+	//게시판
+	{
+		path: '/posts',
+		name: 'PostList',
+		component: PostListView,
+	},
+	{
+		path: '/posts/create',
+		name: 'PostCreate',
+		component: PostCreateView,
+	},
+
+	// ':id' <- 동적 라우팅이라도하며 여러 개의 URL을 하나의 페이지 컴포넌트에 맵핑하고 싶을때
+	// 표현하는 표현 방식이다.
+	// 이 세미콜론은 파라미터라고 해서 라우트 객체에 params로 받을 수 있다. -> {{ $route.params }}
+	{
+		path: '/posts/:id',
+		name: 'PostDetail',
+		component: PostDetailView,
+	},
+	{
+		path: '/posts/:id/edit',
+		name: 'PostEdit',
+		component: PostEditView,
 	},
 ];
 
