@@ -28,23 +28,39 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { getPostById } from '@/api/posts';
 import { ref } from 'vue';
-const route = useRoute();
+
+const props = defineProps({
+	id: Number,
+});
+
 const router = useRouter();
-const id = route.params.id;
+//const id = route.params.id;
+
+//'ref'의 장점은 객체 할당이 가능하다는 점 그리고 일관성(?)이 있다.
+// 단점은 form.value.title , form.value.conent 계속해서 value를 붙여야함
 const form = ref({});
 
+//'reactive'의 장단점은 'ref'의 반대다.
+//let form = reactive({});
+
 const fetchPost = () => {
-	const data = getPostById(id);
+	const data = getPostById(props.id);
+	//ref
 	form.value = { ...data };
+
+	//reactive
+	//form.title = data.title;
+	//form.content = data.content;
 };
 
 fetchPost();
 
 const goListPage = () => router.push({ name: 'PostList' });
-const goEditPage = () => router.push({ name: 'PostEdit', params: { id } });
+const goEditPage = () =>
+	router.push({ name: 'PostEdit', params: { id: props.id } });
 </script>
 
 <style lang="scss" scoped></style>
