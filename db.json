@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "title": "제목4",
+      "content": "내용4",
+      "createdAt": "2024-04-04"
+    },
+    {
+      "title": "asda",
+      "content": "adas",
+      "createdAt": 1723515842100,
+      "id": 5
+    }
+  ]
+}

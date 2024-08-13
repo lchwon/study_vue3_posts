@@ -47,7 +47,7 @@ const routes = [
 		name: 'PostDetail',
 		component: PostDetailView,
 		// props: true,
-		porps: route => ({
+		props: route => ({
 			id: parseInt(route.params.id),
 		}),
 	},
