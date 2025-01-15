@@ -1,7 +1,6 @@
 <template>
 	<!--
 		/ -> HomeView.vue
-
 		/about -> AboutView.vue
 	
 	-->

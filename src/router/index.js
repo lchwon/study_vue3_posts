@@ -19,12 +19,12 @@ const routes = [
 	{
 		path: '/', //root로 들어왔을 때
 		name: 'Home',
-		component: HomeView,
+		component: HomeView, //HomeView.vue를 불러온다
 	},
 	{
 		path: '/about', //about로 들어왔을 때
 		name: 'About',
-		component: AboutView,
+		component: AboutView, //AboutView.vue를 불러온다
 	},
 
 	//게시판

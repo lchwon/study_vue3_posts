@@ -1,5 +1,6 @@
 <template>
 	<div>Home view</div>
+	<br />
 	<p>{{ $route.path }}</p>
 	<p>{{ $route.name }}</p>
 	<button class="btn btn-primary" @click="goAboutPage">About이동</button>
