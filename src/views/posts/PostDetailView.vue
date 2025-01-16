@@ -4,6 +4,7 @@
 		<p>{{ post.content }}</p>
 		<p class="text-muted">{{ post.createdAt }}</p>
 		<hr class="my-4" />
+		{{ $route }}
 		<div class="row g-2">
 			<div class="col-auto">
 				<button class="btn btn-outline-dark">이전글</button>

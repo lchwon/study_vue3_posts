@@ -43,7 +43,7 @@ const routes = [
 	// 표현하는 표현 방식이다.
 	// 이 세미콜론은 파라미터라고해서 라우트 객체에 params로 받을 수 있다. -> {{ $route.params }}
 	{
-		path: '/posts/:id',
+		path: '/posts/:id', //세미콜론(:) 의 이름은 params의 이름을 말한다. 다른 이름으로 지정이 가능하다
 		name: 'PostDetail',
 		component: PostDetailView,
 		props: true,
